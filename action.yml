@@ -9,6 +9,9 @@ inputs:
   chat-id: 
     description: Unique identifier for the target chat or username
     required: true
+  thread-id:
+    description: Unique identifier for the target thread
+    required: true
   text:
     description: Text of the message to be sent
     required: true
@@ -33,6 +36,7 @@ runs:
   args:
     - ${{ inputs.bot-token-id }}
     - ${{ inputs.chat-id }} 
+    - ${{ inputs.thread-id }}
     - ${{ inputs.text }} 
     - ${{ inputs.parse-mode }} 
     - ${{ inputs.disable-web-page-preview }} 
